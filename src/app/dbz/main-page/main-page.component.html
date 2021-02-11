@@ -6,14 +6,12 @@
 
 <div class="row">
     <div class="col">
-        <h3>Personajes</h3><hr>
-        <ul>
-            <li *ngFor="let per of personajes">
-                {{per.nombre}} -  {{per.poder}}
-            </li>
-            
-        </ul>
-    </div>
+
+
+        <app-personajes [data]="personajes"></app-personajes>
+
+       
+    </div>  
     <div class="col">
         <h3>Agregar</h3>
         <hr>
