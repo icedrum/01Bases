@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbc.service';
 
 
 
@@ -10,43 +11,14 @@ import { Personaje } from '../interfaces/dbz.interface';
 })
 export class MainPageComponent  {
 
-  constructor() { }
-
-  personajes: Personaje[]=[
-    {nombre:'Goku',poder:10000},{nombre:'Vegeta',poder:7000},
-
-
-  ];
-
-
+  constructor() {
+      
+  }
+ 
   nuevo: Personaje={
-      nombre: '',
-      poder:0,
-  }
+    nombre: 'XXXXX',
+    poder:10,
+}
 
-
-  cambiarNombre(eve: any){
-    console.log(eve);
-    
-  }
-
-  agregar(){
-
-      if(this.nuevo.nombre.trim().length===0){
-        return;
-      } 
-
-   
-
-      this.personajes.push(this.nuevo);
-      
-      //despues de insertarlo, reinicio
-      this.nuevo={
-        nombre:'',
-        poder:0,
-      }
-      
-    
-  }
-
+  
 }
